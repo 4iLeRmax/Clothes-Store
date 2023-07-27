@@ -18,8 +18,6 @@ const RightSideModal = ({ close }: LoginFormProps) => {
   const [formType, setFormType] = useState<TFormType>('SIGNUP');
   const width = window.innerWidth;
 
-  // console.log(width);
-
   const modal = document.getElementById('form');
   if (!modal) {
     return;
