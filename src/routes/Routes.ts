@@ -6,6 +6,8 @@ import ProductsPage from '../pages/ProductsPage/ProductsPage';
 import SingleProduct from '../pages/SingleProduct/SingleProduct';
 import UserPage from '../pages/UserPage/UserPage';
 
+//sdfsdfsfsdf
+
 export const config = [
   { path: '/', element: HomePage },
   { path: '/products', element: ProductsPage },
