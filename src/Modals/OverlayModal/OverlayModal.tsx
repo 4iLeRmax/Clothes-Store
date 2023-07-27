@@ -1,6 +1,5 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { createPortal } from 'react-dom';
-import cn from 'classnames';
 import { motion } from 'framer-motion';
 
 import css from './OverlayModal.module.scss';

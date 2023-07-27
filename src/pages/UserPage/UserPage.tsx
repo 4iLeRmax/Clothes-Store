@@ -1,29 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { UseQueryResult, useMutation, useQuery } from '@tanstack/react-query';
+import { useEffect, useState } from 'react';
+import { UseQueryResult, useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useForm } from 'react-hook-form';
 
 import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 import { removeTokens } from '../../store/reducers/userSlice';
 
-import type { IUser, TRegisterForm } from '../../types';
+import type { IUser } from '../../types';
 
 import css from './UserPage.module.scss';
-import { USERS, defaultValue } from '../../utils/config';
+import { defaultValue } from '../../utils/config';
 import InputForm from '../../components/InputForm/InputForm';
 
 const UserPage = () => {
   const [updateInfo, setUpdateInfo] = useState<IUser>(defaultValue);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { access_token, refresh_token } = useAppSelector(({ user }) => user.tokens);
+  const { access_token } = useAppSelector(({ user }) => user.tokens);
 
-  const {
-    data: userInfo,
-    refetch,
-    isFetching,
-  }: UseQueryResult<IUser> = useQuery(
+  const { data: userInfo, refetch }: UseQueryResult<IUser> = useQuery(
     ['currentUser'],
     async () =>
       await axios.get('https://api.escuelajs.co/api/v1/auth/profile', {

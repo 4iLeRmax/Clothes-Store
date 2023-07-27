@@ -1,7 +1,6 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import { IoMdClose } from 'react-icons/io';
-import cn from 'classnames';
 
 import styles from './Search.module.scss';
 

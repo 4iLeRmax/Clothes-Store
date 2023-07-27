@@ -1,4 +1,4 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+// import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -11,7 +11,7 @@ const Slider = () => {
     <>
       <Swiper
         // install Swiper modules
-        modules={[Navigation]}
+        // modules={[Navigation]}
         slidesPerView={1}
         navigation
         loop={true}

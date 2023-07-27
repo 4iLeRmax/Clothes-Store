@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Path, UseFormRegister, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 
@@ -27,9 +27,8 @@ const InputForm = ({
   setUpdateInfo,
   password,
 }: InputFormProps) => {
-  const [btnValue, setBtnValue] = useState('UPDATE');
   const [isVisible, setIsVisible] = useState(false);
-  const { register, handleSubmit, setValue } = useForm({
+  const { register, handleSubmit } = useForm({
     defaultValues: {
       [label]: defaultValue,
     },
@@ -38,7 +37,6 @@ const InputForm = ({
   const {
     mutate,
     isLoading,
-    isIdle,
     isSuccess,
     isError,
     status,

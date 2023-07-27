@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import { UseQueryResult } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
 
