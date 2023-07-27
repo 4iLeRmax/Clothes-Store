@@ -31,7 +31,6 @@ const RightSideModal = ({ close }: LoginFormProps) => {
           // initial={{ x: 200, opacity: 0 }}
           // animate={{ x: 0, opacity: 1 }}
           // exit={{ x: 200, opacity: 0 }}
-
           // initial={{ y: 500, opacity: 0, scale: 0 }}
           // animate={{ y: 0, opacity: 1, scale: 1 }}
           // exit={{ y: 500, opacity: 0, scale: 0 }}
