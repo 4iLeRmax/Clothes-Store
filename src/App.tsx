@@ -10,7 +10,7 @@ import css from './App.module.scss';
 const App = () => {
   return (
     <>
-      <Router basename='/Clothes/'>
+      <Router>
         <Header />
         <div className={css.wrap}>
           <Routes>
