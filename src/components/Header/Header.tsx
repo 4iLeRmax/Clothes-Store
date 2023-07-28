@@ -25,6 +25,8 @@ import UserModal from '../../Modals/UserModal/UserModal';
 
 import styles from './Header.module.scss';
 
+//sdnfsdiuf s
+
 const Header: FC = () => {
   const { access_token } = useAppSelector(({ user }) => user.tokens);
 
@@ -46,7 +48,7 @@ const Header: FC = () => {
     'categories',
     CATEGORIES_URL,
   );
-  
+
   const location = useLocation();
 
   const closeOverlay = () => {
